@@ -18,6 +18,7 @@
     "preco" => 3500
  ];
 
+ //matriz
  $produtos = [
     $produto1, 
     $produto2, 
