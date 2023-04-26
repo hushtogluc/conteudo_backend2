@@ -11,18 +11,20 @@
     <hr>
 
     <form action="" method="post">
+        
+        <label>Nome</label><br>
+        <input type="text" name="nome"><br>
 
-       <label>Nome</label><br>
-       <input type="text" name="nome"> <br> 
+        <label>Login</label><br>
+        <input type="text" name="login"><br>
 
-       <label>Login</label><br>
-       <input type="text" name="login"> <br> 
-
-       <label>Senha</label><br>
-       <input type="text" name="senha"> <br> 
+        <label>Senha</label><br>
+        <input type="password" name="senha"><br>
+        
 
     </form>
 
 
+    
 </body>
 </html>
