@@ -18,4 +18,4 @@ if($conexao->connect_error){
     echo $conexao->connect_error;
     die();
 }
-
+?>
