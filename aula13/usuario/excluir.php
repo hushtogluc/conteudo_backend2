@@ -3,18 +3,16 @@
    //importa o arquivo de conexão
    require_once "../conexao.php";
 
-   $nome = $_POST['nome'];
-   $login = $_POST['login'];
-   $senha = password_hash($_POST['senha'], PASSWORD_BCRYPT);
+   $id = $_GET['id'];
 
    //cria uma variável com um comando SQL
-   $SQL = "INSERT INTO `usuario` (`nome`, `login`, `senha`) VALUES (?, ?, ?);";
+   $SQL = "DELETE FROM `usuario` WHERE  `idusuario`= ? ;";
  
    //prepara o comando para ser executado no mysql
    $comando = $conexao->prepare($SQL);
 
-   //faz a vinculação dos parâmetros ?, ?, ?
-   $comando->bind_param("sss", $nome, $login, $senha);
+   //diz qual valor vai ser colocado no lugar do ?
+   $comando->bind_param("i", $id);
 
    //executa o comando
    $comando->execute();
