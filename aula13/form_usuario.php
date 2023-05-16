@@ -14,8 +14,10 @@ require_once "usuario/consultar_por_id.php";
     <h1>Cadastro de usuário</h1>
     <hr>
 
-    <form action="usuario/inserir.php" method="post">
-        
+    <form action="<?php echo isset($usuario)?"usuario/atualizar.php":"usuario/inserir.php";?>" method="post">
+
+    <input type="hidden" name="idusuario" value="<?php echo $usuario->idusuario ?? "" ;?>" ><br>    
+
         <label>Nome</label><br>
         <input type="text" name="nome" value="<?php echo $usuario->nome ?? "" ;?>" ><br>
 
