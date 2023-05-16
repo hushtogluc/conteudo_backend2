@@ -10,7 +10,7 @@
   <body>
 <div class="container">
 
-    <h1>Usuários</h1>
+    <h1>Usuarios</h1>
     <hr>
 
     <a href="form_usuario.php" class="btn btn-success">Inserir Novo</a>

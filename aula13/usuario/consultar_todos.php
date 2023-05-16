@@ -1,5 +1,5 @@
 <?php
-   //importa o arquivo de conexao
+   //importa o arquivo de conexão
    require_once "conexao.php";
 
    //cria uma variável com um comando SQL

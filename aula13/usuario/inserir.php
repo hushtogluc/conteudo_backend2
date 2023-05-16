@@ -22,7 +22,7 @@
    $comando->execute();
 
 }
-   //volta para o formulário
+   //volta para o formulario
    header("Location: ../usuarios.php");
 
    
