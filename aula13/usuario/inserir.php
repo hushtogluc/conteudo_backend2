@@ -9,7 +9,7 @@
    $login = $_POST['login'];
    $senha = password_hash($_POST['senha'], PASSWORD_BCRYPT);
 
-   //cria uma variável com um comando SQL
+   //cria uma variavel com um comando SQL
    $SQL = "INSERT INTO `usuario` (`nome`, `login`, `senha`) VALUES (?, ?, ?);";
  
    //prepara o comando para ser executado no mysql

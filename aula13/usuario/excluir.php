@@ -17,7 +17,7 @@
    //executa o comando
    $comando->execute();
 
-   //volta para o formulário
+   //volta para o formulario
    header("Location: ../form_usuario.php");
 
    

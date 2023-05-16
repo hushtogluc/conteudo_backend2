@@ -1,6 +1,6 @@
 <?php
    
-   //importa o arquivo de conexão
+   //importa o arquivo de conexao
    require_once "conexao.php";
 
    //verifica se foi enviada o param id pela URL
