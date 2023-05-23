@@ -1,5 +1,5 @@
 <?php 
-require_once "usuario/consultar_por_id.php";
+require_once "consultar_por_id.php";
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ require_once "usuario/consultar_por_id.php";
     <h1>Cadastro de usuário</h1>
     <hr>
 
-    <form action="<?php echo isset($usuario)?"usuario/atualizar.php":"usuario/inserir.php";?>" method="post" enctype="multipart/form-data">
+    <form action="<?php echo isset($usuario)?"atualizar.php":"inserir.php";?>" method="post" enctype="multipart/form-data">
 
     <input type="hidden" name="idusuario" value="<?php echo $usuario->idusuario ?? "" ;?>" ><br>    
 
