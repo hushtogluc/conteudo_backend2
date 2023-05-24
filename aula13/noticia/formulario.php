@@ -1,16 +1,10 @@
 <?php 
-require_once "consultar_por_id.php";
+    require_once "consultar_por_id.php";
+    require_once "../template/cabecalho.php"
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documento</title>
-</head>
-<body>
+<div class="container">
+
     <h1>Cadastro de notícias</h1>
     <hr>
 
@@ -18,23 +12,21 @@ require_once "consultar_por_id.php";
 
     <input type="hidden" name="idnoticia" value="<?php echo $noticia->idnoticia ?? "" ;?>" ><br>    
 
-        <label>Título</label><br>
-        <input type="text" name="titulo" value="<?php echo $noticia->titulo ?? "" ;?>" ><br>
+        <label class="form-label" >Título</label><br>
+        <input class="form-control" type="text" name="titulo" value="<?php echo $noticia->titulo ?? "" ;?>" ><br>
 
-        <label>Materia</label><br>
-        <input type="text" name="materia" value="<?php echo $noticia->materia?? "" ;?>" ><br>
+        <label class="form-label">Materia</label><br>
+        <textarea class="form-control" name="materia"><?php echo $noticia->materia ?? "" ;?> </textarea><br>
 
-        <label>Categoria</label><br>
-        <input type="text" name="categoria" value="<?php echo $noticia->categoria?? "" ;?>"><br>
+        <label class="form-label">Categoria</label><br>
+        <input class="form-control" type="text" name="categoria" value="<?php echo $noticia->categoria?? "" ;?>"><br>
         
-        <label>Foto</label><br>
-        <input type="file" name="foto"><br>
+        <label class="form-label">Foto</label><br>
+        <input  class="form-control" type="file" name="foto"><br>
 
-        <button type="submit">Inserir</button>
-        
+        <button type="submit" class="btn btn-success">Inserir</button> 
     </form>
-
-
     
-</body>
-</html>
+</div>
+
+<?php require_once "../template/rodape.php"; ?>
