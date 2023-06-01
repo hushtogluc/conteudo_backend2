@@ -1,7 +1,5 @@
-<?php require "../noticia/consultar_categorias.php"; ?>
-
 <!-- Menu Principal -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Menu</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,15 +8,25 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-        <?php foreach($categorias as $noticia): ?>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?assunto=<?php echo $noticia->categoria; ?>"><?php echo $noticia->categoria; ?></a>
+          <a class="nav-link" 
+          href="../site/index.php">
+          Site
+          </a>
         </li>
-        <?php endforeach; ?>
 
         <li class="nav-item">
           <a class="nav-link" 
-          href="../noticia/index.php">Acesso Restrito</a>
+          href="../noticia/index.php">
+          Notícias
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" 
+          href="../usuario/index.php">
+          Usuários
+          </a>
         </li>
 
       </ul>

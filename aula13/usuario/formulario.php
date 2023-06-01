@@ -1,16 +1,18 @@
 <?php 
-    require_once "consultar_por_id.php";
-    require_once "../template/cabecalho.php"
+require_once "consultar_por_id.php";
+require_once "../template/cabecalho.php";
+require_once "../template/menu_restrito.php";
 ?>
-
 <div class="container">
-
     <h1>Cadastro de usuário</h1>
     <hr>
 
-    <form action="<?php echo isset($usuario)?"atualizar.php":"inserir.php";?>" method="post" enctype="multipart/form-data">
-
-    <input type="hidden" name="idusuario" value="<?php echo $usuario->idusuario ?? "" ;?>" ><br>    
+    <form action="<?php echo isset($usuario) ? 
+     "atualizar.php":
+     "inserir.php"; ?>"
+      method="post" enctype="multipart/form-data">
+        
+        <input type="hidden" name="idusuario" value="<?php echo $usuario->idusuario ?? "" ;?>" ><br>
 
         <label>Nome</label><br>
         <input type="text" name="nome" value="<?php echo $usuario->nome ?? "" ;?>" ><br>
@@ -20,14 +22,15 @@
 
         <label>Senha</label><br>
         <input type="password" name="senha"><br>
-        
+
         <label>Foto</label><br>
         <input type="file" name="foto"><br>
-
+        <br>
         <button type="submit">Inserir</button>
         
     </form>
 
+
 </div>
 
-<?php require_once "../template/rodape.php"; ?>
+<?php require_once "../template/rodape.php" ?>
