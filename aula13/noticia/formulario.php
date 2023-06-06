@@ -1,4 +1,5 @@
 <?php 
+    require_once "../login/controlar_acesso.php"; 
     require_once "consultar_por_id.php";
     require_once "../template/cabecalho.php"
 ?>

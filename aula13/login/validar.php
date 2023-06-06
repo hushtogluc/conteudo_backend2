@@ -25,17 +25,18 @@ if(isset($_POST['login']) and isset ($_POST['senha'])){
     $usuario = $resultados->fetch_object();
 
     //if($usuario != NULL) ----> "diferente"
-    if($usuario and password_verify($senha, $usuario->senha)){
-        
+    if($usuario != NULL){
+        if(password_verify($senha, $usuario->senha)){
         session_start();
         $_SESSION['usuario'] = $usuario->nome;
-        header("Location: ../noticia/index.php");
-        die();
-        
+        header("Location: ../noticia/index.php");        
+    }else{
+        $erro_login = "Senha Incorreta!";
     }
-    
-    header("Location: formulario.php");
-    
+
+  }  else{
+    $erro_login = "Não existe usuário com o login informado";
+    }
 }
 
 ?>
