@@ -1,27 +1,43 @@
 <?php
    
    //importa o arquivo de conexão
-   require_once "../dados/conexao.php";
+   require_once "../banco/conexao.php";
 
-   if(isset($_POST['titulo']) && isset($_POST['sinopse']) && isset($_POST['ano']) && isset($_POST['diretor'])){
+   //verifica se o nome, login e senha foram enviado
+   //do formulário de cadastro
+   if(isset($_POST['codigo']) && isset($_POST['titulo']) &&
+      isset($_POST['sinopse'])){
 
-      //faz upload da foto do usuário
-      require_once "faz_upload.php";
+   //faz o upload do diretor do usuário
+   require_once "faz_upload.php";
 
-   $nome = $_POST['nome'];
-   $login = $_POST['login'];
-   $senha = password_hash($_POST['senha'], PASSWORD_BCRYPT);
+   $codigo= $_POST['codigo'];
+   $titulo = $_POST['titulo'];
+   $sinopse = $_POST['sinopse'];
+   $sinopse = $_POST['ano'];
+   $diretor = $_POST['diretor'];
 
-   //cria uma variavel com um comando SQL
-   $SQL = "INSERT INTO `usuario` (`nome`, `login`, `senha`, foto) VALUES (?, ?, ?, ?);";
+   //cria uma variável com um comando SQL
+   $SQL = "INSERT INTO `filme` (`codigo`, `titulo`, `sinopse`, `ano`, `diretor`) VALUES (?, ?, ?, ?, ?);";
  
    //prepara o comando para ser executado no mysql
    $comando = $conexao->prepare($SQL);
 
    //faz a vinculação dos parâmetros ?, ?, ?
-   $comando->bind_param("ssss", $nome, $login, $senha, $nome_foto);
+   $comando->bind_param("sssss", $codigo, $titulo, $sinopse, $ano, $diretor);
 
    //executa o comando
    $comando->execute();
 
-}
+   }
+
+   //volta para o formulário
+   header("Location: index.php");
+
+   
+
+
+
+
+
+

@@ -7,19 +7,20 @@
      "inserir.php"; ?>"
       method="post" enctype="multipart/form-data">
         
-        <input type="hidden" name="idusuario" value="" ;?>" ><br>
+        <label>Código</label><br>
+        <input type="hidden" name="codigo" value=""> <br>
 
         <label>Título</label><br>
-        <input type="text" name="titulo" value="" ><br>
+        <input type="text" name="titulo" value=""> <br>
 
         <label>Sinopse</label><br>
-        <input type="text" name="sinopse" value="" ><br>
+        <input type="text" name="sinopse" value=""> <br>
 
         <label>Ano de lançamento</label><br>
-        <input type="text" name="ano" value="" ><br>
+        <input type="text" name="ano" value=""> <br>
 
         <label>Diretor</label><br>
-        <input type="text" name="diretor" value="" ><br> 
+        <input type="text" name="diretor" value=""> <br> 
 
         <br>
         <button type="submit">Inserir</button>
