@@ -1,8 +1,13 @@
+    <?php
+   require_once "consultar_por_id.php";
+   require_once "../template/cabecalho.php";
+?>
+
 <div class="container">
     <h1>Cadastro de filmes </h1>
     <hr>
 
-    <form action="<?php echo isset($usuario) ? 
+    <form action="<?php echo isset($filme) ? 
      "atualizar.php":
      "inserir.php"; ?>"
       method="post" enctype="multipart/form-data">
@@ -23,3 +28,4 @@
         <button type="submit">Inserir</button>
         
     </form>
+

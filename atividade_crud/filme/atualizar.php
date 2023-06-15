@@ -10,7 +10,7 @@
 
 
    //cria uma variável com um comando SQL
-   $SQL = "UPDATE `filme` SET `titulo`= ?, `sinopse`= ?, `ano`= ?, `diretor`= ? WHERE  `codigo`= ? ;";
+   $SQL = "UPDATE `filme` SET `titulo`= ?, `sinopse`= ?, `ano`= ?, `diretor`= ? WHERE `codigo`= ? ;";
  
    //prepara o comando para ser executado no mysql
    $comando = $conexao->prepare($SQL);
