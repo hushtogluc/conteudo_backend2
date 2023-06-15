@@ -1,4 +1,5 @@
-<?php require "../noticia/consultar_categorias.php"; ?>
+<?php require "../filme/consultar_categorias.php"; ?>
+
 
 <!-- Menu Principal -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -10,15 +11,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-        <?php foreach($categorias as $noticia): ?>
+        <?php foreach($anos as $filme): ?>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?assunto=<?php echo $noticia->categoria; ?>"><?php echo $noticia->categoria; ?></a>
+          <a class="nav-link" href="index.php?assunto=<?php echo $filme->ano; ?>"><?php echo $filme->ano; ?></a>
         </li>
         <?php endforeach; ?>
 
         <li class="nav-item">
           <a class="nav-link" 
-          href="../noticia/index.php">Acesso Restrito</a>
+          href="../filme/index.php">Acesso Restrito</a>
         </li>
 
       </ul>

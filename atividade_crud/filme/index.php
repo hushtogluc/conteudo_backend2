@@ -1,8 +1,7 @@
 <?php 
-  require_once "../login/controlar_acesso.php"; 
   require "consultar_todos.php";
   require_once "../template/cabecalho.php";
-  require_once "../template/menu_restrito.php";
+
 ?>
 
 <div class="container">
@@ -30,14 +29,15 @@
     <tr>
       <td><?= $filme->titulo ?></td>
       <td><?= $filme->sinopse ?></td>
-      <td><img src="../uploads/<?= $filme->foto ?>" height="45px"></td>
-      <td class="text-end" width="25%">
-        <a href="excluir.php?id=<?= $filme->codigo ?>" class="btn btn-danger">
+      <td><?= $filme->ano ?></td>
+      <td><?= $filme->diretor ?></td>
+      <td>
+        <a href="excluir.php?codigo=<?= $filme->codigo ?>" class="btn btn-danger">
         <i class="fa-solid fa-trash"></i> 
         Excluir
       </a>
 
-      <a href="formulario.php?id=<?= $filme->codigo ?>" class="btn btn-primary">
+      <a href="formulario.php?codigo=<?= $filme->codigo ?>" class="btn btn-primary">
       <i class="fa-solid fa-pen-to-square"></i>
         Atualizar
       </a>

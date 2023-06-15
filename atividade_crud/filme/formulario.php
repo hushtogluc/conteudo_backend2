@@ -7,9 +7,6 @@
      "inserir.php"; ?>"
       method="post" enctype="multipart/form-data">
         
-        <label>Código</label><br>
-        <input type="hidden" name="codigo" value=""> <br>
-
         <label>Título</label><br>
         <input type="text" name="titulo" value=""> <br>
 
