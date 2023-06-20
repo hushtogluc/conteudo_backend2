@@ -10,18 +10,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-        <?php foreach($anos as $filme): ?>
-        <li class="nav-item">
-          <a class="nav-link" href="index.php?assunto=<?php echo $filme->ano; ?>"><?php echo $filme->ano; ?></a>
-        </li>
-        <?php endforeach; ?>
-
-        <li class="nav-item">
-          <a class="nav-link" 
-          href="../filme/index.php">Acesso Restrito</a>
-        </li>
-
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
