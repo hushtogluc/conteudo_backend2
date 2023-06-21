@@ -30,4 +30,4 @@
         <button type="submit">Inserir</button>
         
     </form>
-
+    <?php require_once "../template/rodape.php" ?>
