@@ -2,7 +2,7 @@
 
 <!--Rodapé-->
 <footer class="bg-dark p-3 text-white text-center">
-    Meu site de notícias @ 2023
+    Camila Facanali @ 2023
   </footer>
 <!--Final do rodapé -->
 
